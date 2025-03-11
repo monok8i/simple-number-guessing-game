@@ -1,4 +1,5 @@
 import random
+import time
 
 def display_welcome_message():
     print(
@@ -50,19 +51,25 @@ def play_round(attempts):
     """Plays a single round of the guessing game."""
     random_number = random.randint(1, 100)
 
+    start_time = time.time()
+
     for attempt in range(1, attempts + 1):
         guess = get_player_guess()
 
         if guess == random_number:
-            print(f"Congratulations! You guessed the correct number in {attempt} attempts.")
+            end_time = time.time()
+            elapsed_time = end_time - start_time
+            print(f"Congratulations! You guessed the correct number in {attempt} attempts. Your time: {elapsed_time:.2f} seconds")
             return True  # Player won
 
         elif guess < random_number:
             print(f"Incorrect! The number is greater than {guess}")
         else:
             print(f"Incorrect! The number is less than {guess}")
-
-    print(f"Sorry, you lost. The number was {random_number}")
+    end_time = time.time()
+    elapsed_time = end_time - start_time
+    
+    print(f"Sorry, you lost. The number was {random_number}. Your time: {elapsed_time:.2f} seconds")
     return False
 
 
