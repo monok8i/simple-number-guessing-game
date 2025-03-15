@@ -4,7 +4,7 @@
 
 This is a simple number guessing game implemented in Python. The computer generates a random number between 1 and 100, and the player has to guess the number within a limited number of attempts. The difficulty can be adjusted, providing varying numbers of attempts.
 
-This is also sample solution for the [task-manager](https://roadmap.sh/projects/task-tracker) challenge from [roadmap.sh](https://roadmap.sh/).
+This is also sample solution for the [task-manager](https://roadmap.sh/projects/number-guessing-game) challenge from [roadmap.sh](https://roadmap.sh/).
 
 
 ## Features
